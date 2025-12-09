@@ -1,0 +1,22 @@
+<%- include('layout', { body: `
+<h1>Produk & Stock</h1>
+
+<table class="table">
+  <tr>
+    <th>#</th>
+    <th>SKU</th>
+    <th>Nama</th>
+    <th>Harga</th>
+    <th>Stock</th>
+  </tr>
+  ${products.map((p,i)=>`
+  <tr>
+    <td>${i+1}</td>
+    <td>${p.sku}</td>
+    <td>${p.name}</td>
+    <td>Rp ${Number(p.price).toLocaleString()}</td>
+    <td>${p.quantity}</td>
+  </tr>
+  `).join('')}
+</table>
+` }) %>

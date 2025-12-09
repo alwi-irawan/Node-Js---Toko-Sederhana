@@ -1,0 +1,37 @@
+<%- include('layout', { body: `
+<h1>Daftar Pembelian</h1>
+
+<table class="table">
+  <tr>
+    <th>#</th>
+    <th>Produk</th>
+    <th>Qty</th>
+    <th>Total</th>
+    <th>Status</th>
+    <th>Tanggal</th>
+    <th>Aksi</th>
+  </tr>
+  ${purchases.map((p,i)=>`
+  <tr>
+    <td>${i+1}</td>
+    <td>${p.product_name}</td>
+    <td>${p.qty}</td>
+    <td>Rp ${Number(p.total_price).toLocaleString()}</td>
+    <td>${p.status}</td>
+    <td>${p.created_at}</td>
+    <td>
+      ${p.status === 'completed' ? `
+      <form method="POST" action="/purchases/${p.id}/cancel">
+        <button
+          class="btn-cancel"
+          onclick="return confirm('Cancel pembelian ini?')"
+        >
+          Cancel
+        </button>
+      </form>
+      ` : `Cancelled at ${p.cancelled_at}` }
+    </td>
+  </tr>
+  `).join('')}
+</table>
+` }) %>

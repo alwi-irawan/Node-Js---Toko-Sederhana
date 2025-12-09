@@ -1,0 +1,25 @@
+<%- include('../partials/header') %>
+
+<div class="container mt-4">
+  <h3>Input Pembelian</h3>
+
+  <form action="/pembelian/add" method="POST">
+    <div class="mb-3">
+      <label class="form-label">Pilih Produk</label>
+      <select name="produk_id" class="form-select" required>
+        <% produk.forEach(p => { %>
+        <option value="<%= p.id %>"><%= p.name %></option>
+        <% }) %>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Qty</label>
+      <input type="number" class="form-control" name="qty" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Simpan</button>
+  </form>
+</div>
+
+<%- include('../partials/footer') %>

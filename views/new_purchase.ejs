@@ -1,0 +1,20 @@
+<%- include('layout', { body: `
+<h1>Input Pembelian</h1>
+
+<form method="POST" action="/purchases" class="form">
+  <label>Produk:</label>
+  <select name="product_id" required>
+    <option value="">-- Pilih Produk --</option>
+    ${products.map(p => `
+    <option value="${p.id}">
+      ${p.name} - Rp ${Number(p.price).toLocaleString()}
+    </option>
+    `).join('')}
+  </select>
+
+  <label>Jumlah:</label>
+  <input type="number" name="qty" min="1" value="1" required />
+
+  <button type="submit">Simpan</button>
+</form>
+` }) %>

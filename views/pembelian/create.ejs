@@ -1,0 +1,24 @@
+<%- include('../layout', { title: "Tambah Pembelian" }) %>
+
+<div class="card">
+  <div class="card-header">Tambah Pembelian</div>
+  <div class="card-body">
+    <form action="/pembelian/store" method="POST">
+      <div class="mb-3">
+        <label>Produk</label>
+        <select name="produk_id" class="form-control" required>
+          <% products.forEach(p => { %>
+          <option value="<%= p.id %>"><%= p.nama_produk %></option>
+          <% }) %>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label>Jumlah</label>
+        <input type="number" name="qty" class="form-control" required />
+      </div>
+
+      <button class="btn btn-primary">Simpan</button>
+    </form>
+  </div>
+</div>

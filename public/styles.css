@@ -1,0 +1,52 @@
+body {
+  font-family: Arial;
+  background: #f3f3f3;
+  margin: 0;
+}
+.nav {
+  background: #222;
+  color: #fff;
+  padding: 10px;
+}
+.nav a {
+  color: #fff;
+  margin-right: 10px;
+  text-decoration: none;
+}
+.container {
+  padding: 20px;
+  background: #fff;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 6px;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table td,
+.table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.form label {
+  display: block;
+  margin-top: 10px;
+}
+input,
+select {
+  padding: 8px;
+  width: 300px;
+}
+button {
+  padding: 8px 12px;
+  margin-top: 10px;
+}
+.btn-cancel {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+}

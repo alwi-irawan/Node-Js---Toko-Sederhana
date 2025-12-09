@@ -1,0 +1,32 @@
+{
+  "name": "toko-sederhana",
+  "version": "1.0.0",
+  "description": "rest api node js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alwi-irawan/Node-Js---Toko-Sederhana.git"
+  },
+  "keywords": [
+    "toko",
+    "sederhana"
+  ],
+  "author": "allwi irawan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alwi-irawan/Node-Js---Toko-Sederhana/issues"
+  },
+  "homepage": "https://github.com/alwi-irawan/Node-Js---Toko-Sederhana#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.2.1",
+    "mysql2": "^3.15.3"
+  }
+}

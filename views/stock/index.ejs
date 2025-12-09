@@ -1,0 +1,22 @@
+<%- include('../layout', { title: "Stock Produk" }) %>
+
+<h4>Stock Produk</h4>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Produk</th>
+      <th>Stock</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% stock.forEach((s, i) => { %>
+    <tr>
+      <td><%= i+1 %></td>
+      <td><%= s.nama_produk %></td>
+      <td><%= s.stock %></td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>
