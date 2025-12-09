@@ -1,22 +1,22 @@
-<%- include('../layout', { title: "Stock Produk" }) %>
+<%- include('../partials/header', { title: "Stock Produk" }) %>
 
 <h4>Stock Produk</h4>
 
-<table class="table table-bordered table-striped">
+<table class="table table-bordered mt-3">
   <thead>
     <tr>
-      <th>#</th>
       <th>Produk</th>
-      <th>Stock</th>
+      <th>Stok</th>
     </tr>
   </thead>
   <tbody>
-    <% stock.forEach((s, i) => { %>
+    <% stock.forEach(s => { %>
     <tr>
-      <td><%= i+1 %></td>
       <td><%= s.nama_produk %></td>
-      <td><%= s.stock %></td>
+      <td><%= s.qty %></td>
     </tr>
     <% }) %>
   </tbody>
 </table>
+
+<%- include('../partials/footer') %>

@@ -1,27 +1,25 @@
-<%- include('../layout', { title: "List Produk" }) %>
+<%- include('../partials/header', { title: "List Produk" }) %>
 
-<div class="card">
-  <div class="card-header">
-    <strong>Daftar Produk</strong>
-  </div>
-  <div class="card-body">
-    <table class="table table-bordered table-striped">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Nama Produk</th>
-          <th>Harga</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% products.forEach((p, i) => { %>
-        <tr>
-          <td><%= i+1 %></td>
-          <td><%= p.nama_produk %></td>
-          <td>Rp <%= p.harga %></td>
-        </tr>
-        <% }) %>
-      </tbody>
-    </table>
-  </div>
-</div>
+<h3>List Produk</h3>
+
+<table class="table table-bordered mt-3">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nama Produk</th>
+      <th>Harga</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% products.forEach(p => { %>
+    <tr>
+      <td><%= p.id %></td>
+      <td><%= p.name %></td>
+      <td><%= p.price %></td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>
+
+<%- include('../partials/footer') %>
