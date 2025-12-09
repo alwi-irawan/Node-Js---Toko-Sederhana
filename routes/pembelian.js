@@ -22,7 +22,7 @@ router.post('/add', async (req, res) => {
             "INSERT INTO pembelian (product_id, qty) VALUES (?, ?)",
             [produk_id, qty]
         );
-        res.redirect('/pembelian');
+        res.send("Pembelian berhasil disimpan!");
     } catch (err) {
         console.log(err);
         res.send("Gagal menyimpan pembelian");
